@@ -50,7 +50,7 @@ def isObjPublic(_bucket, _key):
 # loop through bucket, get all keys, save to csv
 def getKeys(_bucket,_marker=None):
 
-    filename = unicode(_bucket + ('_' + _marker if _marker else ''), 'utf-8')
+    filename = unicode(_bucket + ('_' + _marker if _marker else ''), 'utf-8').encode('utf-8')
 
     # print info
     print '\x1b[0;33;49mFetching keys from: ' + filename.encode('utf-8')
